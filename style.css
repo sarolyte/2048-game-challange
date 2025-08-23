@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+html {
+  background-color: #fbf8f1;
+  font-family: rubik;
+}
+
+header {
+  padding: 20px;
+}
+header #headerContent {
+  display: flex;
+  justify-content: space-between;
+}
+header #headerContent h1 {
+  margin: 0;
+  color: #766251;
+  font-size: 40pt;
+}
+header #headerContent #newGameBtn {
+  height: 45px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #9c897c;
+  border: solid 0.5px #766251;
+  color: #fbf8f1;
+  font-size: 14pt;
+}
+header #headerContent #resultsSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 55px;
+}
+header #headerContent #resultsSection .scoreSection,
+header #headerContent #resultsSection .bestScoreSection {
+  border: solid 2px #eee4da;
+  width: 100px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+header #headerContent #resultsSection .scoreSection p,
+header #headerContent #resultsSection .bestScoreSection p {
+  margin: 0;
+  color: #9c897c;
+}
+header #headerContent #resultsSection .scoreSection #scoreNo,
+header #headerContent #resultsSection .scoreSection #bestScoreNo,
+header #headerContent #resultsSection .bestScoreSection #scoreNo,
+header #headerContent #resultsSection .bestScoreSection #bestScoreNo {
+  font-size: 24px;
+  color: #9c897c;
+  font-weight: 700;
+}
+header #headerContent #resultsSection .scoreSection {
+  background-color: #eee4da;
+}
+
+#newGameBtn:hover {
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 20px;
+}
+main .instruction {
+  color: #766251;
+}
+main .instruction span {
+  font-weight: 600;
+}
+main #gameBoard {
+  margin-top: 25px;
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  background-color: #9c897c;
+  padding: 10px;
+  border-radius: 20px;
+}
+main #gameBoard .tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #6ebb70;
+  border-radius: 10px;
+}
+main #gameBoard .emptyTile {
+  background-color: #bdac98;
+  box-shadow: 0 0.2px 4px #000 inset;
+}
+main #gameBoard .tileShadow {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2980392157);
+}
+main #gameBoard .tile2 {
+  background-color: #eee4da;
+  color: #766251;
+}
+main #gameBoard .tile4 {
+  background-color: #ebd8b7;
+  color: #766251;
+}
+main #gameBoard .tile8 {
+  background-color: #f3b177;
+  color: white;
+}
+main #gameBoard .tile16 {
+  background-color: #f6905f;
+  color: white;
+}
+main #gameBoard .tile32 {
+  background-color: #f77e63;
+  color: white;
+}
+main #gameBoard .tile64 {
+  background-color: #f76441;
+  color: white;
+}
+main #gameBoard .tileBiggerThan64 {
+  background-color: #f1d066;
+  color: white;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(4px) brightness(60%);
+          backdrop-filter: blur(4px) brightness(60%);
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9;
+  display: none;
+}
+#overlay #modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 10px;
+  height: 180px;
+  width: 400px;
+  background-color: #fbf8f1;
+  opacity: 0.9;
+  overflow: auto;
+  z-index: 20;
+}
+#overlay #modal #modalContent {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  right: 60px;
+  width: 300px;
+  text-align: center;
+}
+#overlay #modal #modalContent #modalMessage {
+  color: #766251;
+  font-size: 14pt;
+}
+#overlay #modal #modalBtns {
+  display: flex;
+  position: absolute;
+  top: 130px;
+  left: 60px;
+  right: 60px;
+  align-items: flex-end;
+  justify-content: center;
+}
+#overlay #modal #modalBtns .playAgainBtn {
+  height: 40px;
+  padding: 5px 10px;
+  background-color: #eee4da;
+  border: solid 1px #9c897c;
+  border-radius: 10px;
+  color: #766251;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

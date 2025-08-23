@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div id="headerContent">
+            <h1>2048</h1>
+            <div id="resultsSection">
+                <div class="scoreSection">
+                    <p>Score</p>
+                    <p id="scoreNo">0</p>
+                </div>
+
+                <div class="bestScoreSection">
+                    <p>Best</p>
+                    <p id="bestScoreNo">0</p>
+                </div>
+            </div>
+            <button id="newGameBtn">New Game</button>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="instruction">
+            <p><span>HOW TO PLAY:</span> Use you <span>arrow keys</span> to move the yiles/Tiles with the same number <span>merge into one</span> when they touch. Add them up to reach <span>2048!</span></p>
+        </div>
+        <div id="gameBoard"></div>
+    </main>
+
+    <div id="overlay">
+        <div id="modal" 
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalTitle"
+            aria-describedby="modalContent"
+            tabindex="-1">
+                <div id="modalContent"></div>
+                <div id="modalBtns"></div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
